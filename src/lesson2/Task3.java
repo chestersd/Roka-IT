@@ -12,7 +12,7 @@ public class Task3 {
 
     public static void main(String[] args) {
 
-        int time = 56796;
+        int time = 1386128;
         int secondsInAMinute = 60;
         int secondsInAnHour = secondsInAMinute * 60;
 
@@ -22,7 +22,8 @@ public class Task3 {
         System.out.println(time + " seconds are:");
         System.out.println("A) " + (time / secondsInAMinute) + " minutes " + (time % secondsInAMinute) + " seconds");
         System.out.println("B) " + (time / secondsInAnHour) + " hours " + ((time % secondsInAnHour) / secondsInAMinute) + " minutes " + (time % secondsInAMinute) + " seconds");
-        System.out.println("C) " + (time / secondsInADay) + " days " + ((time % secondsInADay) / secondsInAnHour) + " hours " + ((time % secondsInADay) / secondsInAnHour) + " minutes " + ((time % secondsInADay) % secondsInAMinute + " seconds"));
+        System.out.println("C) " + (time / secondsInADay) + " days " + ((time % secondsInADay) / secondsInAnHour) + " hours " + (((time % secondsInADay) % secondsInAnHour) / secondsInAMinute) + " minutes " + ((time % secondsInADay) % secondsInAMinute + " seconds"));
+        System.out.println("D) " + (time / secondsInAWeek) + " weeks " + ((time % secondsInAWeek) / secondsInADay) + " days " + (((time % secondsInAWeek) % secondsInADay)/ secondsInAnHour) + " hours " + (((time % secondsInADay) % secondsInAnHour) / secondsInAMinute) + " minutes " + ((time % secondsInADay) % secondsInAMinute + " seconds"));
 
     }
 }
